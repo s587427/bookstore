@@ -1,12 +1,14 @@
-Create your subdomain
+# Render Cloud
+## 1. 建立 Web Service 
+![create](https://i.imgur.com/NFd059r.png)
 
-Connect to an existing App
+## 2. 連結自己的repository庫或Public
 
-1.打開你的終端並輸入下一個命令：b4a new。
-2.鍵入 (e) 並選擇您要配置的應用程序名稱的數字：
+![](https://i.imgur.com/sSd6o2d.png)
 
-Deploy a Cloud Funtion
+## 3. 設定部屬配置
 
-b4a new
-b4a deploy
-b4a list
+## Connecting to MongoDB Atlas
+
+### 1. Create and Configure a Database
+

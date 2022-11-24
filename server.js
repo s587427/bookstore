@@ -20,15 +20,13 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
-// 建立db連線實例
-mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true, //訪問mongoDB的方式, to avoid the DeprecationWarning.
-})
 
-// 確保連線成功
-const db = mongoose.connection
-db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose'))
+// 建立db連線實例
+// 返回的是一個promise
+mongoose
+.connect(process.env.DATABASE_URL)
+.then(res => console.log('Connected to Mongoose'))
+.catch(err => console.log(err))
 
 
 app.use(indexRouter)
