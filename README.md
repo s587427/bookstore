@@ -12,3 +12,6 @@
 
 ### 1. Create and Configure a Database
 
+
+## partials folder
+> 一部分的代碼放入到我們的layout使用並非跟route有實際上的接觸

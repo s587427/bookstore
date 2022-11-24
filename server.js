@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV !== 'production') {
     // 使用dotenv
     require('dotenv').config()
 }
@@ -10,6 +10,7 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
+const authorRouter = require('./routes/authors')
 
 // app.set類似Object可以設定鍵與值, 有些鍵是內置的配置對象
 app.set('view engine', 'ejs')
@@ -18,18 +19,20 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layout/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
 
 const mongoose = require('mongoose')
 
 // 建立db連線實例
 // 返回的是一個promise
 mongoose
-.connect(process.env.DATABASE_URL)
-.then(res => console.log('Connected to Mongoose'))
-.catch(err => console.log(err))
+    .connect(process.env.DATABASE_URL)
+    .then(res => console.log('Connected to Mongoose'))
+    .catch(err => console.log('連接失敗', err))
 
 
 app.use(indexRouter)
+app.use('/authors', authorRouter)
 
 app.listen(process.env.PORT || 3000)
 

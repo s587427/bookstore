@@ -7,8 +7,10 @@
     <title>Mybarry</title>
 </head>
 <body>
-    Before
-    <br>
+    <!-- 語法可以使用額外的ejs檔案 -->
+    <%- include('../partials/header')  %> 
+    <%- include('../partials/errorMessage') %>
+    
     <!-- 此語法可以動態替換掉body的內容 -->
     <%- body %>
     <br>
