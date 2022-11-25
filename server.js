@@ -11,6 +11,7 @@ const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 // app.set類似Object可以設定鍵與值, 有些鍵是內置的配置對象
 app.set('view engine', 'ejs')
@@ -33,6 +34,7 @@ mongoose
 
 app.use(indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 app.listen(process.env.PORT || 3000)
 

@@ -1,0 +1,21 @@
+
+<label>標題</label>
+<input type="text" name="title" value="<%= book.name %>">
+<label>作者</label>
+<select name="" id="">
+    <% authors.forEach(author => { %>
+        <% if(author.id === book.author){ %>
+            <option 
+                selected 
+                label="<%= author.name %>" 
+                value="<%= author.id %>">
+            </option>
+        <% } else { %>
+            <option 
+                label="<%= author.name %>" 
+                value="<%= author.id %>">
+            </option>
+        <% } %>
+    <% }) %>
+</select>
+
