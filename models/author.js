@@ -10,8 +10,8 @@ const authorSchema = new mongoose.Schema({
 
 // mongoose.model(tableName, Schema) «Model» The model associated with name. Mongoose will create the model if it doesn't already exist.
 
+
+// 建立一個collection是author
 module.exports = mongoose.model('Author', authorSchema)
 
-
-// 模型的實例稱為文檔
 // 模型負責從底層 MongoDB 數據庫創建和讀取文檔
