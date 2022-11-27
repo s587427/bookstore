@@ -1,1 +1,23 @@
-<h2>all book</h2>
+<h2>搜尋書</h2>
+
+<form action="/books" method="get">
+    <div>
+        <label >標題</label>
+        <input  type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+    <div>
+        <label>發行日期起</label>
+        <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+    </div>
+    <div>
+        <label>發行日期訖</label>
+        <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+    </div>
+    <button>Submit</button>
+</form>
+
+<div>
+    <% books?.forEach(book => { %>
+       <img height="150" width="150" src="<%= book.coverImagePath %>">
+    <% }) %> 
+</div>

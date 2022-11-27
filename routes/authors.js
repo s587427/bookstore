@@ -5,7 +5,7 @@ const Author = require('../models/author')
 // 全部的作者 Route
 router.get('/', async (req, res) => {
 
-    console.log(req.query.name)
+    // console.log(req.query.name)
     // new RegExp('Sheng', 'i') = /Sheng/i
     try {
         // {} equal to no condition
