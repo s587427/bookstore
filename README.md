@@ -15,3 +15,14 @@
 
 ## partials folder
 > 一部分的代碼放入到我們的layout使用並非跟route有實際上的接觸
+
+## 技術
+
+1. ejs --> html渲染js模板
+2. express-ejs-layouts --> 在express可以使用layout功能
+3. express --> webserver
+4. mongoose --> 與mongodb連線處理資料
+5. multer --> 檔案上傳中間件
+6. dotenv --> 環境變量
+7. nodemon --> hot update(不必每次修改都要node xxx.js)
+8. filepond --> 檔案上傳的套件(這裡使用的是照片) https://pqina.nl/filepond/

@@ -23,9 +23,20 @@ const bookSchema = new mongoose.Schema({
         required: true,
         default: Date.now
     },
-    coverImageName: {
+    // 存在主機資料夾的作法
+    // coverImageName: {
+    //     type: String,
+    //     required: true
+    // },
+
+    // 直接儲存到database
+    coverImage: {
+        type: Buffer,
+        require: true
+    },
+    coverImageType: {
         type: String,
-        required: true
+        require: true
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
@@ -34,11 +45,19 @@ const bookSchema = new mongoose.Schema({
     }
 })
 
-bookSchema.virtual('coverImagePath').get(function(){
+bookSchema.virtual('coverImagePath').get(function () {
     // 當要求這個屬性時會調用這個方法
-    if(this.coverImageName){
-        // 靜態資源public所在位置/
-        return path.join('/', coverImageBasePath, this.coverImageName) 
+
+    // 檔案上傳
+    // if(this.coverImageName){
+    //     // 靜態資源public所在位置/
+    //     return path.join('/', coverImageBasePath, this.coverImageName) 
+    // }
+
+    // database讀取
+    if (this.coverImage && this.coverImageType) {
+        const base64String = this.coverImage.toString('base64')
+        return `data:${this.coverImageType};base64,${base64String}`
     }
 })
 

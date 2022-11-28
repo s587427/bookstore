@@ -20,7 +20,7 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layout/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
 const mongoose = require('mongoose')
 
