@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
@@ -21,6 +22,9 @@ app.set('layout', 'layout/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
+// _method=DELETE 複寫post請求改為delete => ?_method=DELETE
+app.use(methodOverride('_method'))
+
 
 const mongoose = require('mongoose')
 

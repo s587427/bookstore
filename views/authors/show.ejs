@@ -1,0 +1,7 @@
+<h2><%= author.name %></h2>
+
+<a href="/authors/<%= author.id %>/edit">編輯</a>
+
+<%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
+
+<h1>書的作者</h1>

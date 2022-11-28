@@ -1,0 +1,7 @@
+<h2>編輯作者</h2>
+<form method="post" action="/authors/<%= author.id %>?_method=put" >
+    <!-- 因為新增跟編輯共用所以讓他變成共享得部分 -->
+    <%- include('_form_fields') %>
+    <a href="/authors">取消</a>
+    <button type="submit">更新</button>
+</form>
