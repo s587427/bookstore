@@ -17,11 +17,21 @@ const upload = multer({
 })
 
 router.get('/', async (req, res) => {
-    
     try {
-        const books = await Book.find({})
+        let query = Book.find()
+        if(req.query.title){
+            query.where('title', new RegExp(req.query.title, 'i'))
+        }
+        if(req.query.publishedAfter){
+            query.gte('publishDate', req.query.publishedAfter)
+        }
+        if(req.query.publishedBefore){
+            query.lte('publishDate', req.query.publishedBefore)
+        }
+        const books = await query.exec()
         res.render('books', { books: books, searchOptions: req.query })
     } catch (error) {
+        console.log(error)
         res.redirect('/')
     }
 })
