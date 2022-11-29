@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Author = require('../models/author')
+const Book = require('../models/book')
 
 // 全部的作者 Route
 router.get('/', async (req, res) => {
@@ -49,8 +50,13 @@ router.post('/', async (req, res) => {
 
 // 瀏覽作者
 router.get('/:id', async (req, res) => {
-    const author = await Author.findById(req.params.id)
-   res.render('authors/show', {author})
+    try {
+        const author = await Author.findById(req.params.id)
+        const books = await Book.find({ author: author.id }).limit(6).exec()
+        res.render('authors/show', { author, books })
+    } catch (error) {
+        res.redirect('/authors')
+    }
 })
 
 // 編輯作者
@@ -73,9 +79,9 @@ router.put('/:id', async (req, res) => {
         await author.save()
         res.redirect(`/authors/${req.params.id}`)
     } catch {
-        if(!author){
+        if (!author) {
             res.redirect('/')
-        }else{
+        } else {
             res.render('authors/edit', {
                 author: author,
                 errorMessage: 'Error updating Author'
@@ -85,8 +91,21 @@ router.put('/:id', async (req, res) => {
 })
 
 // 刪除作者
-router.delete('/:id', (req, res) => {
-    res.send(`刪除作者${req.params.id}`)
+router.delete('/:id', async (req, res) => {
+    let author
+    try {
+        author = await Author.findById(req.params.id)
+        await author.remove()
+        res.redirect('/authors')
+    } catch (error) {
+        // console.log(error)
+        if (!author) {
+            res.redirect('/')
+        } else {
+            res.render('authors/show', { author, errorMessage: '刪除失敗' })
+        }
+    }
+
 })
 
 module.exports = router

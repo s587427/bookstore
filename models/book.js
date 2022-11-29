@@ -32,11 +32,11 @@ const bookSchema = new mongoose.Schema({
     // 直接儲存到database
     coverImage: {
         type: Buffer,
-        require: true
+        required: true
     },
     coverImageType: {
         type: String,
-        require: true
+        required: true
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,

@@ -2,7 +2,7 @@
 
 <form action="/books" method="get">
     <div>
-        <label >標題</label>
+        <label>標題</label>
         <input  type="text" name="title" value="<%= searchOptions.title %>">
     </div>
     <div>
@@ -13,7 +13,7 @@
         <label>發行日期訖</label>
         <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
     </div>
-    <button>Submit</button>
+    <button>搜尋</button>
 </form>
 
 <div>
@@ -21,6 +21,9 @@
        <h1><%= book.title %></h1>
        <h2><%= book.publishDate %></h2>
        <img height="150" width="100" src="<%= book.coverImagePath %>">
+       <a href="/books/<%= book.id %>">瀏覽</a>
+       <a href="/books/<%= book.id %>/edit">編輯</a>
+       <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %>
        
     <% }) %> 
 </div>
