@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mybarry</title>
     <!-- css -->
+    <link rel="stylesheet" href="/css/index.css">
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <link
         href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
@@ -19,13 +20,14 @@
     <script defer src="/js/fileUpload.js"></script>
 </head>
 <body>
-    <!-- 語法可以使用額外的ejs檔案 -->
-    <%- include('../partials/header')  %> 
-    <%- include('../partials/errorMessage') %>
-    
-    <!-- 此語法可以動態替換掉body的內容 -->
-    <%- body %>
-    <br>
-    After
+    <div class="container">     
+        <!-- 語法可以使用額外的ejs檔案 -->
+        <div class="inner-container">
+            <%- include('../partials/header')  %>
+            <%- include('../partials/errorMessage') %>          
+            <!-- 此語法可以動態替換掉body的內容 -->
+            <%- body %>
+        </div>
+    </div>
 </body>
 </html>

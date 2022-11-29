@@ -1,8 +1,12 @@
-<h1>近期的書</h1>
-<div>
+<h1 class="title">最新上架</h1>
+<div class="home-container">
     <% books.forEach(book => { %>
-       <h1><%= book.title %></h1>
-       <h2><%= book.publishDate %></h2>
-       <img height="150" width="150" src="<%= book.coverImagePath %>">
+        <a href="books/<%= book.id %>">
+            <img 
+                height="300" 
+                width="200" 
+                src="<%= book.coverImagePath %>"
+            >
+        </a>
     <% }) %> 
 </div>

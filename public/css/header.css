@@ -1,0 +1,36 @@
+.nav-container{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-container ul{
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-container .nav-title{
+    text-decoration: none;
+    font-size: 3.25rem;
+    color: var(--text-main-color);
+}
+
+.nav-container .nav-link{
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-title:hover, .nav-link a:hover{
+    color: var(--accent-color);
+}

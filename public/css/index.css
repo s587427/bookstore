@@ -1,0 +1,50 @@
+@import './utility.css';
+@import './header.css';
+@import './homepage.css';
+
+:root {
+
+    --font-size: 1.25rem;
+    --main-color: #F7F1F0;
+    --secondary-color: #C3A6A0;
+    --accent-color: #A15C38;
+    --text-main-color: #262220;
+
+
+    /* 
+        1. 
+            如果要決定網站使用的配色，最好能夠將色相（hue）控制在四個或以下
+            主色和次要色可以擁有顏色變化例如色度（shade）、淺色（tint）或色調（tone）
+
+        2.
+            主色: 你的品牌與企業類型
+            次色: 應該與主色呈現對比或互補關係      
+            強調色: 應該能夠脫穎而出，最適合用在連結、按鈕、圖示以及其他小元素上, 
+                    如果你的圖標帶有鮮豔的色相，請試著將該顏色納入強調色。
+        
+    */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: var(--main-color);
+    color: #262220;
+    font-size: var(--font-size);
+}
+
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.inner-container {
+    margin: 1rem;
+}
