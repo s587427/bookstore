@@ -32,5 +32,5 @@
 }
 
 .nav-title:hover, .nav-link a:hover{
-    color: var(--accent-color);
+    color: var(--text-main-offset-color);
 }

@@ -1,6 +1,8 @@
 @import './utility.css';
 @import './header.css';
 @import './homepage.css';
+@import './authors.css';
+@import './shared/buttons.css';
 
 :root {
 
@@ -8,7 +10,10 @@
     --main-color: #F7F1F0;
     --secondary-color: #C3A6A0;
     --accent-color: #A15C38;
-    --text-main-color: #262220;
+    --accent-offset-color: #ff8033;
+    --text-main-color: var(--accent-color);
+    --text-main-offset-color: var(--accent-offset-color);
+
 
 
     /* 

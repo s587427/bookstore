@@ -1,0 +1,43 @@
+.btn-main{
+    margin-top: 1rem;
+    width: 70px;
+    height: 40px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1.2rem;
+    border: 2px solid var(--secondary-color);
+    font-weight: 600;
+    color: var(--text-main-color);
+    transition: .5s;
+}
+
+.btn-main:hover{
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.btn-danger{
+    margin-top: 1rem;
+    width: 70px;
+    height: 40px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1.2rem;
+    border: 2px solid var(--accent-offset-color);
+    font-weight: 600;
+    color: var(--text-main-offset-color);
+    transition: .5s;
+}
+
+.btn-danger:hover{
+    background: var(--accent-offset-color);
+    color: var(--main-color);
+}
+
+
+.btn-group{
+    display: flex;
+    column-gap: 1rem;
+}

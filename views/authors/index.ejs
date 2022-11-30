@@ -1,18 +1,34 @@
-<h2>搜尋作者</h2>
 
-<form action="/authors" method="get">
-    <label for="name">Name</label>
-    <input id="name" type="text" name="name" value="<%= searchValue %>">
-    <button>搜尋</button>
-</form>
 
-<% authors.forEach(author => { %>
-    <div>
-        <div><%= author.name %></div>
-        <a href="/authors/<%= author.id %>">瀏覽</a>
-        <a href="/authors/<%= author.id %>/edit">編輯</a>
-        <!-- 刪除部分 -->
-        <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
-    </div>
+<div class="author-search-wrap">
     
-<% }) %> 
+    <h2 class="title">搜尋作者</h2>
+
+    <form action="/authors" method="get" class="author-search-form">
+        <label for="name">名稱</label>
+        <input id="name" type="text" name="name" value="<%= searchValue %>">
+        <button class="btn-main">搜尋</button>
+    </form>
+    
+    <div class="author-search-list">
+        <% authors.forEach(author => { %>
+            <div class="author-search-row">
+                <div class="search-row-name">
+                    <%= author.name %>
+                </div>
+
+                <div class="btn-group">
+                    <a href="/authors/<%= author.id %>">
+                        <button class="btn-main">瀏覽</button>
+                    </a>
+                    <a href="/authors/<%= author.id %>/edit">
+                        <button class="btn-main">瀏覽</button>
+                    </a>
+                    <!-- 刪除部分 -->
+                    <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
+                </div>
+            </div>
+          
+        <% }) %> 
+    </div>
+</div>

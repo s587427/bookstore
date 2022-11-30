@@ -1,0 +1,54 @@
+
+.author-search-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.author-search-wrap .author-search-form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.author-search-form label{
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.author-search-form input{
+   outline: none;
+   height: 45px;
+   border-radius: .5rem;
+   font-size: 20px;
+   color: var(--accent-color);
+   padding-left: 0.5rem;
+   border: 2px solid var(--accent-color);
+   opacity: 0.7;
+   font-weight: 600;
+}
+
+
+.author-search-form button{
+    align-self: flex-end;
+}
+
+.author-search-list{
+    margin-top: 5rem;
+}
+
+.author-search-list a{
+    text-decoration: none;
+}
+
+.author-search-list .author-search-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-search-row .search-row-name{
+    color: var(--accent-color);
+    font-size:  1.5rem;
+    font-weight: 600;
+}
