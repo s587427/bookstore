@@ -1,7 +1,12 @@
-<h2>新增書</h2>
+<h2 class="title">新增書</h2>
 <form action="/books" method="post">
     <!-- 因為新增跟編輯共用所以讓他變成共享得部分 -->
     <%- include('_form_fields') %>
-    <a href="/books">Cancel</a>
-    <button type="submit">Create</button>
+
+    <a href="/books" class="remove-link-underline">
+        <button class="btn-main" type="button">
+            取消
+        </button>
+    </a>
+    <button class="btn-danger" type="submit">新增</button>
 </form>

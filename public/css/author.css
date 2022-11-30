@@ -5,29 +5,25 @@
 }
 
 .author-search-wrap .author-search-form{
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 
-.author-search-form label{
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.author-search-form input{
+/* .author-search-form input{
    outline: none;
    height: 45px;
    border-radius: .5rem;
-   font-size: 20px;
+   font-size: var(--text-content-normal);
    color: var(--accent-color);
-   padding-left: 0.5rem;
-   border: 2px solid var(--accent-color);
+   padding-left: .5rem;
+   border: 1px solid var(--accent-color);
    opacity: 0.7;
-   font-weight: 600;
+   font-weight: var(--text-normal-weight);
 }
+.author-search-form input:focus{
+    border: 2px solid var(--accent-offset-color);
+} */
 
 
 .author-search-form button{
@@ -48,7 +44,15 @@
 }
 
 .author-search-row .search-row-name{
+    cursor: pointer;
     color: var(--accent-color);
-    font-size:  1.5rem;
-    font-weight: 600;
+    font-size: var(--text-content-normal);
+    font-weight: var(--text-normal-weight);
+    display: flex;
+    align-items: flex-end;
+}
+
+.author-show-btn-group{
+    display: flex;
+    column-gap: 1rem;
 }

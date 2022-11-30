@@ -5,9 +5,9 @@
     border-radius: 0.25rem;
     cursor: pointer;
     background: transparent;
-    font-size: 1.2rem;
+    font-size: var(--text-content-normal);
     border: 2px solid var(--secondary-color);
-    font-weight: 600;
+    font-weight: var(--text-normal-weight);
     color: var(--text-main-color);
     transition: .5s;
 }
@@ -24,9 +24,9 @@
     border-radius: 0.25rem;
     cursor: pointer;
     background: transparent;
-    font-size: 1.2rem;
+    font-size: var(--text-content-normal);
     border: 2px solid var(--accent-offset-color);
-    font-weight: 600;
+    font-weight: var(--text-normal-weight);
     color: var(--text-main-offset-color);
     transition: .5s;
 }
@@ -35,7 +35,6 @@
     background: var(--accent-offset-color);
     color: var(--main-color);
 }
-
 
 .btn-group{
     display: flex;

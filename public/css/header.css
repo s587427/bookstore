@@ -1,5 +1,5 @@
 .nav-container{
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,7 +15,7 @@
 
 .nav-container .nav-title{
     text-decoration: none;
-    font-size: 3.25rem;
+    font-size: var(--text-brand-font-size);
     color: var(--text-main-color);
 }
 
@@ -27,7 +27,7 @@
 .nav-link a {
     text-decoration: none;
     color: var(--text-main-color);
-    font-size: 1.2rem;
+    font-size: var(--text-link-font-size);
     font-weight: 600;
 }
 

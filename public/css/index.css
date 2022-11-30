@@ -1,22 +1,10 @@
-@import './utility.css';
-@import './header.css';
-@import './homepage.css';
-@import './authors.css';
 @import './shared/buttons.css';
-
-:root {
-
-    --font-size: 1.25rem;
-    --main-color: #F7F1F0;
-    --secondary-color: #C3A6A0;
-    --accent-color: #A15C38;
-    --accent-offset-color: #ff8033;
-    --text-main-color: var(--accent-color);
-    --text-main-offset-color: var(--accent-offset-color);
-
-
-
-    /* 
+@import './shared/utility.css';
+@import './header.css';
+@import './home.css';
+@import './author.css';
+@import './book.css';
+ /* 
         1. 
             如果要決定網站使用的配色，最好能夠將色相（hue）控制在四個或以下
             主色和次要色可以擁有顏色變化例如色度（shade）、淺色（tint）或色調（tone）
@@ -28,6 +16,22 @@
                     如果你的圖標帶有鮮豔的色相，請試著將該顏色納入強調色。
         
     */
+
+:root {
+    --main-color: #F7F1F0;
+    --secondary-color: #C3A6A0;
+    --accent-color: #A15C38;
+    --accent-offset-color: #ff8033;
+    --text-main-color: var(--accent-color);
+    --text-main-offset-color: var(--accent-offset-color);
+    --text-brand-font-size: 2.5rem;
+    --text-link-font-size: 1.1rem;
+    --text-title-font-size: 1.5rem;
+    --text-content-title: var(--text-link-font-size);
+    --text-content-normal: 1rem;
+    --text-header-weight: 900;
+    --text-title-weight: 800;
+    --text-normal-weight: 600;
 }
 
 * {
@@ -39,8 +43,6 @@
 
 body {
     background: var(--main-color);
-    color: #262220;
-    font-size: var(--font-size);
 }
 
 

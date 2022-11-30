@@ -1,7 +1,13 @@
-<h2>New Author</h2>
-<form action="/authors" method="post" >
+<h2 class="title">新增作者</h2>
+<form action="/authors" method="post">
     <!-- 因為新增跟編輯共用所以讓他變成共享得部分 -->
     <%- include('_form_fields') %>
-    <a href="/authors">Cancel</a>
-    <button type="submit">Create</button>
+        <a class="remove-link-underline" href="/authors">
+            <button type="button" class="btn-danger">
+                取消
+            </button>
+        </a>
+        <button class="btn-main" type="submit">
+            新增
+        </button>
 </form>

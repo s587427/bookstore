@@ -1,7 +1,13 @@
-<h2><%= author.name %></h2>
+<h2 class="title"><%= author.name %></h2>
 
-<a href="/authors/<%= author.id %>/edit">編輯</a>
-<%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
+<div class="author-show-btn-group">
+    <a href="/authors/<%= author.id %>/edit">
+        <button class="btn-main" type="button">
+            編輯
+        </button>
+    </a>
+    <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
+</div>
 
 
 <div>

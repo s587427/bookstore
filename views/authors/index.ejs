@@ -2,11 +2,11 @@
 
 <div class="author-search-wrap">
     
-    <h2 class="title">搜尋作者</h2>
+    <h2 class="title">作者列表</h2>
 
     <form action="/authors" method="get" class="author-search-form">
-        <label for="name">名稱</label>
-        <input id="name" type="text" name="name" value="<%= searchValue %>">
+        <label for="name" class="search-label">查詢作者</label>
+        <input id="name" class="input-main" type="text" name="name" placeholder="請輸入作者名稱..." value="<%= searchValue %>">
         <button class="btn-main">搜尋</button>
     </form>
     
@@ -19,10 +19,10 @@
 
                 <div class="btn-group">
                     <a href="/authors/<%= author.id %>">
-                        <button class="btn-main">瀏覽</button>
+                        <button class="btn-main" type="button">瀏覽</button>
                     </a>
                     <a href="/authors/<%= author.id %>/edit">
-                        <button class="btn-main">瀏覽</button>
+                        <button class="btn-main" type="button">編輯</button>
                     </a>
                     <!-- 刪除部分 -->
                     <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
