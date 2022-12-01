@@ -1,5 +1,6 @@
 @import './shared/buttons.css';
 @import './shared/utility.css';
+@import './shared/form.css';
 @import './header.css';
 @import './home.css';
 @import './author.css';
@@ -54,4 +55,8 @@ body {
 
 .inner-container {
     margin: 1rem;
+}
+
+.filepond--item {
+    width: 100%;
 }

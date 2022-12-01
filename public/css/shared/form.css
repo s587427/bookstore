@@ -1,0 +1,61 @@
+.form-label {
+    color: var(--accent-color);
+    font-size: var(--text-content-title);
+    font-weight: var(--text-title-weight);
+    display: block;
+    margin-bottom: 0.25rem;
+    width: auto;
+}
+
+.form-input {
+    outline: none;
+    height: 35px;
+    border-radius: .25rem;
+    font-size: var(--text-content-normal);
+    color: var(--accent-color);
+    padding: .25rem;
+    border: 1px solid var(--accent-color);
+    opacity: 0.7;
+    font-weight: var(--text-normal-weight);
+    width: 100%;
+}
+
+.form-input:focus {
+    border: 2px solid var(--accent-offset-color);
+}
+
+.form-select {
+    outline: none;
+    height: 35px;
+    border-radius: .25rem;
+    font-size: var(--text-content-normal);
+    color: var(--accent-color);
+    padding-left: 0 .25rem;
+    border: 1px solid var(--accent-color);
+    opacity: 0.7;
+    font-weight: var(--text-normal-weight);
+    width: 100%;
+}
+
+.form-select:focus {
+    border: 2px solid var(--accent-offset-color);
+}
+
+
+.form-textarea {
+    outline: none;
+    height: inherit;
+    border-radius: .25rem;
+    font-size: var(--text-content-normal);
+    color: var(--accent-color);
+    padding: 0.25rem;
+    border: 1px solid var(--accent-color);
+    opacity: 0.7;
+    font-weight: var(--text-normal-weight);
+    width: 100%;
+    height: calc(100% - 2.75rem)
+}
+
+.form-textarea:focus {
+    border: 2px solid var(--accent-offset-color);
+}

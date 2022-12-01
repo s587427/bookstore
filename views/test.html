@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+    <link
+    href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+    rel="stylesheet"
+/>
+   
+
+    <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+
+
+    <style>
+        .box{
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <div class="box">
+        <input type="file" />
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    FilePond.registerPlugin(FilePondPluginImagePreview, FilePondPluginImageResize);
+    // Get a reference to the file input element
+    const inputElement = document.querySelector('input[type="file"]');
+
+    // Create a FilePond instance
+    
+    const pond = FilePond.create(inputElement);
+    pond.setOptions({
+        stylePanelAspectRatio: '150:100',
+        imageResizeTargetWidth: 50,
+        imageResizeTargetHeight: 50,
+    })
+    
+</script>

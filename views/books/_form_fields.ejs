@@ -2,12 +2,12 @@
 
     <div class="book-form-row">
         <div>
-            <label class="search-label">標題</label>
-            <input class="input-main" type="text" name="title" value="<%= book.title %>">
+            <label class="form-label">標題</label>
+            <input class="form-input" type="text" name="title" value="<%= book.title %>">
         </div>
         <div>
-            <label class="search-label">作者</label>
-            <select class="select-main" name="author" id="author">
+            <label class="form-label">作者</label>
+            <select class="form-select" name="author" id="author">
                 <% authors.forEach(author=> { %>
                     <% if(author.id === book.author){ %>
                         <option selected label="<%= author.name %>" value="<%= author.id %>"></option>
@@ -21,26 +21,25 @@
     
     <div class="book-form-row">
         <div>
-            <label class="search-label">出版日期</label>
-            <input class="input-main" type="date" name="publishDate" value="<%= book.publishDate ? book.publishDate.toISOString().split('T')[0] : "" %>">
+            <label class="form-label">出版日期</label>
+            <input class="form-input" type="date" name="publishDate" value="<%= book.publishDate ? book.publishDate.toISOString().split('T')[0] : "" %>">
         </div>
         
         <div>
-            <label class="search-label">頁數</label>
-            <input class="input-main" type="number" name="pageCount" id="pageCount" min="1" value="<%= book.pageCount ?  book.pageCount : '1'  %>">
+            <label class="form-label">頁數</label>
+            <input class="form-input" type="number" name="pageCount" id="pageCount" min="1" value="<%= book.pageCount ?  book.pageCount : '1'  %>">
         </div>
     </div>
     
-    <div class="book-form-row">
+    <div class="book-form-row" style="display: flex; justify-content: space-between;">
         <div>
-            <label class="search-label">封面</label>
-            <input type="file" class="filepond input-main" name="coverImageName">
+            <label class="form-label">封面</label>
+            <input type="file" class="filepond form-input" name="coverImageName">
         </div>
-        
         <div>
-            <label class="search-label">描述</label>
-            <textarea class="textarea-main" name="description" id="description" cols="30" rows="10"><%= book.description %></textarea>
+            <label class="form-label">描述</label>
+            <textarea class="form-textarea" name="description" id="description" cols="30" rows="10"><%= book.description %></textarea>
         </div>
     </div>
+    
 </div>
-

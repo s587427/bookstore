@@ -3,17 +3,23 @@
     
     <form action="/books" method="get" class="book-search-form">
         <div>
-            <label class="search-label">書名</label>
-            <input placeholder="請搜尋書名" type="text" name="title" value="<%= searchOptions.title %>">
+            <label class="form-label">書名</label>
+            <input 
+                placeholder="請搜尋書名" 
+                type="text"
+                name="title" 
+                value="<%= searchOptions.title %>"
+                class="form-input"
+            >
         </div>
         <div class="input-date-group">
             <div>
-                <label class="search-label">出版日期起</label>
-                <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">    
+                <label class="form-label">出版日期起</label>
+                <input class="form-input" type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">    
             </div>
             <div>
-                <label class="search-label">出版日期訖</label>
-                <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+                <label class="form-label">出版日期訖</label>
+                <input class="form-input" type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
             </div>
         </div>
         
