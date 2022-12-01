@@ -11,3 +11,10 @@
 .w-max{
     width: 100% !important;
 }
+
+.error-msg{
+    margin: 1rem 0;
+    color: red;
+    font-size: var(--text-link-font-size);
+    font-weight: var(--text-title-weight);
+}

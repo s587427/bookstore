@@ -6,7 +6,7 @@ const router = express.Router()
 const Author = require('../models/author')
 const Book = require('../models/book')
 
-const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
+const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/jfif']
 
 // 檔案上傳
 // const uploadPath = path.join('public', Book.coverImageBasePath)
@@ -148,9 +148,9 @@ async function renderFormPage(res, book, form, hasError = false) {
         let data = { authors, book }
         if (hasError) {
             if (form === 'new') {
-                data.errorMessage = '建立失敗'
+                data.errorMessage = '建立書籍失敗, 除了其他描述欄位其他為必填'
             } else if (form === 'edit') {
-                data.errorMessage = '更新失敗'
+                data.errorMessage = '更新書籍失敗, 除了其他描述欄位其他為必填'
             }
         }
         res.render(`books/${form}`, data)

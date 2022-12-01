@@ -1,7 +1,9 @@
-<h2>編輯書</h2>
+<h2 class="title">編輯書本</h2>
 <form action="/books/<%= book.id %>?_method=put" method="post">
     <!-- 因為新增跟編輯共用所以讓他變成共享得部分 -->
     <%- include('_form_fields') %>
-    <a href="/books">取消</a>
-    <button type="submit">更新</button>
+    <a href="/books" class="remove-link-underline">
+        <button class="btn-danger" type="button">取消</button>
+    </a>
+    <button class="btn-main" type="submit">更新</button>
 </form>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mybarry</title>
+    <title>Sheng's Book</title>
     <!-- css -->
     <link  id="index-css" rel="stylesheet" href="/css/index.css">
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
@@ -23,10 +23,10 @@
     <div class="container">     
         <!-- 語法可以使用額外的ejs檔案 -->
         <div class="inner-container">
-            <%- include('../partials/header')  %>
-            <%- include('../partials/errorMessage') %>          
+            <%- include('../partials/header')  %>      
             <!-- 此語法可以動態替換掉body的內容 -->
             <%- body %>
+            <%- include('../partials/errorMessage') %>    
         </div>
     </div>
 </body>

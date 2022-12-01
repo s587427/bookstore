@@ -52,7 +52,40 @@
     align-items: flex-end;
 }
 
+/* 瀏覽 */
 .author-show-btn-group{
     display: flex;
     column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.author-show-list{
+    display: flex; 
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.author-show-list a{
+    width: calc(100%/4 - 1rem);
+    margin-right: 1rem;
+}
+
+.author-show-list a img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width:900px) {
+    .author-show-list a{
+        width: calc(100%/2 - 1rem);
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width:500px) {
+    .author-show-list a{
+       width: 100%;
+       margin-right: 0;
+    }
 }

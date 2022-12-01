@@ -10,9 +10,12 @@
 </div>
 
 
-<div>
-    <h1>書的作者</h1>
+<h1 class="form-label"><%= author.name %>的書籍</h1>
+<div class="author-show-list">
     <% books.forEach(book =>{ %>
-        <img height="150" width="100" src="<%= book.coverImagePath %>">
+       <a href="/books/<%= book.id %>" class="remove-link-underline">
+            <img src="<%= book.coverImagePath %>">
+       </a>
     <% }) %>
 </div>
+

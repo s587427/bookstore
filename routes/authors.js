@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
     } catch {
         res.render('authors/new', {
             author: author,
-            errorMessage: 'Error creating Author'
+            errorMessage: '新增作者失敗, 作者名稱不可為空'
         })
     }
 
@@ -84,7 +84,7 @@ router.put('/:id', async (req, res) => {
         } else {
             res.render('authors/edit', {
                 author: author,
-                errorMessage: 'Error updating Author'
+                errorMessage: '更新作者失敗, 作者名稱不可為空'
             })
         }
     }
@@ -102,7 +102,12 @@ router.delete('/:id', async (req, res) => {
         if (!author) {
             res.redirect('/')
         } else {
-            res.render('authors/show', { author, errorMessage: '刪除失敗' })
+            const books = await Book.find({author: author.id})
+            res.render('authors/show', { 
+                author,
+                errorMessage: '作者還擁有書籍無法刪除!!!',
+                books
+            })
         }
     }
 

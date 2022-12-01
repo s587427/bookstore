@@ -1,11 +1,8 @@
-<h1 class="title">最新上架</h1>
-<div class="home-container">
+<h1 class="title">近期上架的書籍Top10</h1>
+<div class="home-wrap">
     <% books.forEach(book => { %>
         <a href="books/<%= book.id %>">
-            <img 
-                height="300"  
-                src="<%= book.coverImagePath %>"
-            >
+            <img src="<%= book.coverImagePath %>" >
         </a>
     <% }) %> 
 </div>

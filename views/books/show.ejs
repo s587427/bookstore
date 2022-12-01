@@ -1,15 +1,42 @@
-<h2>瀏覽: <%= book.title %></h2>
+<h2 class="title"><%= book.title %></h2>
 
-<div>
-    <img src="<%= book.coverImagePath %>">
-    <a href="/books/<%= book.id %>/edit">編輯</a>
-    <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %>
-    <a href="/books/<%= book.author %>">瀏覽作者</a>
-</div>
-
-<div>
-    <label for="">作者:</label> <%= author.name %>
-    <label for="">出版日期:</label>  <%= book.publishDate %>
-    <label for="">頁數:</label>  <%= book.pageCount %>
-    <label for="">描述:</label>  <%= book.description %>
+<div class="book-show-wrap">
+    <div class="book-show-operate">
+        <a href="/books/<%= book.id %>/edit">
+            <button type="button" class="btn-main">編輯</button>
+        </a>
+        <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %>
+        <a href="/authors/<%= book.author %>">
+            <button type="button" class="btn-main">作者</button>
+        </a>
+    </div>
+    <div class="book-show-left">
+        <img src="<%= book.coverImagePath %>">
+    </div>
+    <div class="book-show-right">
+        <div>
+            <label class="show-label title-label">作者:</label>
+            <label class="show-label text-label">
+                <%= author.name %>
+            </label>
+        </div>
+        <div>
+            <label class="show-label title-label">出版日期:</label>
+            <label class="show-label  text-label">
+                <%= new Date(book.publishDate).toLocaleString().split(' ')[0] %>
+            </label>
+        </div>
+        <div>
+            <label class="show-label title-label">頁數:</label>
+            <label class="show-label  text-label">
+                <%= book.pageCount %>
+            </label>
+        </div>
+        <div>
+            <label class="show-label title-label">描述:</label>
+            <label class="show-label  text-label">
+                <%= book.description %>
+            </label>
+        </div>
+    </div>
 </div>

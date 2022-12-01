@@ -1,16 +1,31 @@
-.home-container{
+.home-wrap {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 1rem;
+    justify-content: space-around;
 
 }
 
-.home-container a{
-   margin: 0 auto;
+.home-wrap a {
+    width: 50%;
+    padding: 1.5rem;
 }
 
-.home-container a img{
-    width: 200px;
+.home-wrap a img {
+    max-width: 100%;
+    height: auto;
 }
 
+
+@media (max-width:900px) {
+    .home-wrap a {
+        padding: 1rem;
+    }
+}
+
+@media (max-width:500px) {
+    .home-wrap a {
+        width: 100%;
+    }
+}
