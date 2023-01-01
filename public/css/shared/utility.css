@@ -18,3 +18,7 @@
     font-size: var(--text-link-font-size);
     font-weight: var(--text-title-weight);
 }
+
+.mt-1{
+    margin-top: 1rem;
+}

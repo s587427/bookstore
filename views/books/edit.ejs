@@ -1,4 +1,5 @@
 <h2 class="title">編輯書本</h2>
+
 <form action="/books/<%= book.id %>?_method=put" method="post">
     <!-- 因為新增跟編輯共用所以讓他變成共享得部分 -->
     <%- include('_form_fields') %>

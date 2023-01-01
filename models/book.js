@@ -45,6 +45,7 @@ const bookSchema = new mongoose.Schema({
     }
 })
 
+
 bookSchema.virtual('coverImagePath').get(function () {
     // 當要求這個屬性時會調用這個方法
 

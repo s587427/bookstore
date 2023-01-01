@@ -9,7 +9,7 @@
             <label class="form-label">作者</label>
             <select class="form-select" name="author" id="author">
                 <% authors.forEach(author=> { %>
-                    <% if(author.id === book.author){ %>
+                    <% if(author.id === book.author?.toString()){ %>
                         <option selected label="<%= author.name %>" value="<%= author.id %>"></option>
                     <% } else { %>
                         <option label="<%= author.name %>" value="<%= author.id %>"></option>

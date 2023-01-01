@@ -41,6 +41,8 @@
 .author-search-list .author-search-row{
     display: flex;
     justify-content: space-between;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .author-search-row .search-row-name{
@@ -49,7 +51,7 @@
     font-size: var(--text-content-normal);
     font-weight: var(--text-normal-weight);
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 /* 瀏覽 */
